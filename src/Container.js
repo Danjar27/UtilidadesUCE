@@ -1,11 +1,13 @@
 import {Image, StyleSheet, Text, View} from "react-native";
 import logo from "../assets/svg/logo.svg";
-import Infinito from "./Infinito";
+//TODO: cambiar el logo cuando se haga el build
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'rgb(7,67,107)',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     imageContainer:{
         flexDirection: 'row',
@@ -19,40 +21,31 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 30,
         marginLeft: 10,
-        color: '#464545'
+        color: '#6b6a6a'
     },
     imagen:{
         height: 80,
         width: 80
     },
     inner: {
-        margin: 'auto',
-        borderRadius: '10px',
+        borderRadius: 10,
         width: '85%',
-        height: '95%',
+        height: '85%',
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center'
-    },
-    notch:{
-        marginLeft: '25%',
-        position: 'absolute',
-        zIndex: 5,
-        borderRadius: '10px',
-        backgroundColor: 'rgb(7,67,107)',
-        width: '50%',
-        height: '7%',
     }
 });
 
 const Container = ({children}) => {
     return(
         <View style={styles.container}>
-            <View style={styles.notch}/>
             <View style = {styles.inner}>
                 <View style = {styles.imageContainer}>
-                    <Image style = {styles.imagen} source={logo} />
-                    <Text style = {styles.greet}>Hola<br/>Bienvenido</Text>
+                    <Image style = {styles.imagen} source={{
+                        uri: "http://www.forosecuador.ec/imgfe/sello-uce-logotipo-universidad-central-ecuador-1.png"
+                    }} />
+                    <Text style = {styles.greet}>Hola{'\n'}Bienvenido</Text>
                 </View>
                 <View style = {styles.content}>
                     {children}
