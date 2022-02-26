@@ -37,7 +37,7 @@ const Infinito = () => {
                 marginRight:10
             }}>{minuto}</Text>
             <Text style = {{
-                color:'red',
+                color:'blue',
                 marginRight:10
             }}>{segundo}</Text>
         </View>
