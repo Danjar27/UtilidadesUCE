@@ -29,7 +29,7 @@ const Infinito = () => {
     return(
         <View style = {{flexDirection:'row'}}>
             <Text style = {{
-                color:'blue',
+                color:'green',
                 marginRight:10
             }}>{hora}</Text>
             <Text style = {{
