@@ -7,23 +7,23 @@ const Infinito = () => {
     let [minuto,setMinuto] =useState(0)
     let [hora,setHora] =useState(0)
 
-    useEffect(()=>{
-        if (segundo < 59) {
-            const contador = setInterval(() => {
-                setSegundo(segundo + 1)
-                setSegundo(segundo + 1)
-            }, 1000)
-        }else if(59){
-
-            }
-        return( () =>
-            clearInterval(contador)
-        )
-        } else if(segundo == 59){
-            setSegundo(0)
-            setMinuto(minuto++)
-        }
-    }, [segundo])
+    // useEffect(()=>{
+    //     if (segundo < 59) {
+    //         const contador = setInterval(() => {
+    //             setSegundo(segundo + 1)
+    //             setSegundo(segundo + 1)
+    //         }, 1000)
+    //     }else if(59){
+    //
+    //         }
+    //     return( () =>
+    //         clearInterval(contador)
+    //     )
+    //     } else if(segundo == 59){
+    //         setSegundo(0)
+    //         setMinuto(minuto++)
+    //     }
+    // }, [segundo])
 
 
     return(
