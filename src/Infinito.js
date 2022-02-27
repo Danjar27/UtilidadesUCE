@@ -3,9 +3,22 @@ import {View, Text} from "react-native";
 
 const Infinito = () => {
 
-    let [segundo,setSegundo] =useState(0)
-    let [minuto,setMinuto] =useState(0)
-    let [hora,setHora] =useState(0)
+    let tiempo = new Date()
+    let [segundo,setSegundo] =useState(tiempo.getSeconds())
+    let [minuto,setMinuto] =useState(tiempo.getMinutes())
+    let [hora,setHora] =useState(tiempo.getHours())
+
+    useEffect(()=>{
+        const refresh = setInterval(()=>{
+            tiempo = new Date()
+            setHora(tiempo.getHours())
+            setMinuto(tiempo.getMinutes())
+            setSegundo(tiempo.getSeconds())
+        }, 1000)
+        return(()=>{
+                clearInterval(refresh)
+            })
+    }, [tiempo])
 
     // useEffect(()=>{
     //     if (segundo < 59) {
