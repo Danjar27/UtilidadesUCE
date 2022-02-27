@@ -20,24 +20,6 @@ const Infinito = () => {
             })
     }, [tiempo])
 
-    // useEffect(()=>{
-    //     if (segundo < 59) {
-    //         const contador = setInterval(() => {
-    //             setSegundo(segundo + 1)
-    //             setSegundo(segundo + 1)
-    //         }, 1000)
-    //     }else if(59){
-    //
-    //         }
-    //     return( () =>
-    //         clearInterval(contador)
-    //     )
-    //     } else if(segundo == 59){
-    //         setSegundo(0)
-    //         setMinuto(minuto++)
-    //     }
-    // }, [segundo])
-
 
     return(
         <View style = {{flexDirection:'row'}}>

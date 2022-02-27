@@ -1,14 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Image, View } from 'react-native';
-import Infinito from "./src/Infinito";
+import {StatusBar} from 'expo-status-bar';
 import Container from "./src/Container";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Sebas from './pages/Sebas'
+import Emil from './pages/Emil'
 
-let logo = require('./assets/svg/logo.svg')
-
+const Stack = createNativeStackNavigator();
 export default function App() {
-  return (
-    <Container>
-      <Infinito />
-    </Container>
-  );
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Emil">
+                <Stack.Screen
+                    name={'Emil'}
+                    component={Emil}
+                />
+                <Stack.Screen
+                    name={'Sebas'}
+                    component={Sebas}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
